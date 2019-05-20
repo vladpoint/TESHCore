@@ -1,0 +1,23 @@
+﻿@model TESHCore.Models.Alumnos
+@{
+    ViewData["Title"] = "Create2";
+}
+
+<h2>Create2</h2>
+<form>
+    <div>
+        <label asp-for="NombreAlumno">Nombre del Alumno</label>
+        <input asp-for="NombreAlumno" type="text"/>
+    </div>
+    <div>
+        <label asp-for="ApellidoAlumno">Apellido del Alumno</label>
+        <input asp-for="ApellidoAlumno" type="text"/>
+    </div>
+    <div>
+        <label asp-for="CalificacionAlumno">Calificacion del Alumno</label>
+        <input asp-for="CalificacionAlumno" type="number" />
+    </div>
+    <div>
+        <input asp-for="FechaNacimientoAlumno" type="datetime"/>
+    </div>
+</form>

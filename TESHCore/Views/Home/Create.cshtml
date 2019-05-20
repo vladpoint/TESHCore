@@ -1,0 +1,48 @@
+﻿@model TESHCore.Models.Alumnos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Alumnos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreAlumno" class="control-label"></label>
+                <input asp-for="NombreAlumno" class="form-control" />
+                <span asp-validation-for="NombreAlumno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidoAlumno" class="control-label"></label>
+                <input asp-for="ApellidoAlumno" class="form-control" />
+                <span asp-validation-for="ApellidoAlumno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalificacionAlumno" class="control-label"></label>
+                <input asp-for="CalificacionAlumno" class="form-control" />
+                <span asp-validation-for="CalificacionAlumno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimientoAlumno" class="control-label"></label>
+                <input asp-for="FechaNacimientoAlumno" class="form-control" />
+                <span asp-validation-for="FechaNacimientoAlumno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

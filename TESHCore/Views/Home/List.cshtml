@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TESHCore.Models.Alumnos>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-sm">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreAlumno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoAlumno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalificacionAlumno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimientoAlumno)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreAlumno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoAlumno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalificacionAlumno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimientoAlumno)
+            </td>
+            <td>
+                @Html.ActionLink("Update", "Update", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+                <form asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <button>Delete</button>
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

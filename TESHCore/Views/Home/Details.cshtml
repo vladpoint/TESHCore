@@ -1,0 +1,48 @@
+﻿@model TESHCore.Models.Alumnos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Alumnos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreAlumno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NombreAlumno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ApellidoAlumno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ApellidoAlumno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalificacionAlumno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalificacionAlumno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimientoAlumno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimientoAlumno)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Update", "Update", new { id = Model.Id }) |
+    <a asp-action="List">Back to List</a>
+</div>
